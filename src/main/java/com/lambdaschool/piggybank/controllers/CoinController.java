@@ -36,7 +36,7 @@ public class CoinController
             else
             {
                 totalValue = totalValue + (c.getQuantity() * c.getValue());
-                System.out.println(c.getQuantity() + " " + c.getNameplurl());
+                System.out.println(c.getQuantity() + " " + c.getNameplural());
             }
         }
 

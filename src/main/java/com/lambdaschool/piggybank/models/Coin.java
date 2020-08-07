@@ -20,7 +20,7 @@ public class Coin
     // constructors
     public Coin(
         String name,
-        String nameplurl,
+        String nameplural,
         double value,
         long quantity)
     {
@@ -50,14 +50,14 @@ public class Coin
         this.name = name;
     }
 
-    public String getNameplurl()
+    public String getNameplural()
     {
         return nameplural;
     }
 
-    public void setNameplurl(String nameplurl)
+    public void setNameplural(String nameplural)
     {
-        this.nameplural = nameplurl;
+        this.nameplural = nameplural;
     }
 
     public double getValue()

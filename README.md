@@ -23,9 +23,40 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how you took advantage of Java's Object Oriented approach to solve the sprint challenge.
+
+    Modular - easier to find mistakes
+    Reused code in Coin class through inheritance
+
 2. Explain the three steps needed to run a Java application (using the JDK) including what each step does and how those step correlate to running a JavaScript application.
-3. Explain how Java being a strongly typed language affected you solution.
+
+    javac hello/*.java
+    This created a series of *.class files in whatever directory you're using; one *.class file for each *.java file. These *.class files contain the bytecode the will be run on the JVM.
+    
+    jar cvfe hellothere.jar hello.HelloWorld hello/*.class
+    where cvfe are options meaning
+        • c - create a new archive file with a given name
+        • v - generate verbose output
+        • f - specific the jar output file to be created, in our case hellothere.jar
+        • e - sets the main class also called the Entry point, in our case hello.HelloWord
+    
+    java -jar hellothere.jar
+        • java launches the JVM
+        • -jar says we are using a *.jar file, the most common type of Java archived file
+        • ____.jar is the name of application
+
+3. Explain how Java being a strongly typed language affected your solution.
+
+    Sort method must work with int so type casted -- myList.sort((c1, c2) -> (int) (c1.getQuantity() - c2.getQuantity()));
+    Had to use @GeneratedValue(strategy = GenerationType.AUTO) to assign whatever type the DB wanted to use to assign the id
+
 4. Can you explain the differences between Abstract Classes and Interfaces including how they are used in your application?
+
+	• Classes can inherit from multiple interfaces but only a single abstract class
+	• Abstract classes can contain fields; interfaces should not
+	• Abstract classes can implement methods that get shared across classes; interfaces give method headers but not actual implementations.
+	• Java with the Spring Framework uses interfaces much more than abstract classes!
+	
+    CoinRepository is an interface which extends to the built in abstract class CrudRepository<Coin, Long>
 
 ## Instructions
 
