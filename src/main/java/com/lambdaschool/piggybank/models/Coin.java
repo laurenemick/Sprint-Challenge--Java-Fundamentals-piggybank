@@ -13,7 +13,7 @@ public class Coin
     // use whatever the DB wants to use to assign the id
     private long coinid;
     private String name;
-    private String nameplurl;
+    private String nameplural;
     private double value;
     private long quantity;
 
@@ -25,7 +25,7 @@ public class Coin
         long quantity)
     {
         this.name = name;
-        this.nameplurl = nameplurl;
+        this.nameplural = nameplural;
         this.value = value;
         this.quantity = quantity;
     }
@@ -52,12 +52,12 @@ public class Coin
 
     public String getNameplurl()
     {
-        return nameplurl;
+        return nameplural;
     }
 
     public void setNameplurl(String nameplurl)
     {
-        this.nameplurl = nameplurl;
+        this.nameplural = nameplurl;
     }
 
     public double getValue()
@@ -87,7 +87,7 @@ public class Coin
         return "Coin{" +
             "coinid=" + coinid +
             ", name='" + name + '\'' +
-            ", nameplurl='" + nameplurl + '\'' +
+            ", nameplural='" + nameplural + '\'' +
             ", value='" + value + '\'' +
             ", quantity=" + quantity +
             '}';
