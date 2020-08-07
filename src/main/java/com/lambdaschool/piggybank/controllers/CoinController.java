@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -43,4 +44,13 @@ public class CoinController
         System.out.println("The piggy bank holds " + totalValue);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    // STRETCH http://localhost:2019/money/{amount}
+    /*@GetMapping(value = "/money/{amount}", produces = {"application/json"})
+    public ResponseEntity<?> listByAmount(@PathVariable char amount)
+    {
+        List<Coin> myList = new ArrayList<>();
+        coinrepos.findAll().iterator().forEachRemaining(myList::add);
+        List<Coin> rtnList = findCoins(myList, c -> c.get)
+    }*/
 }
